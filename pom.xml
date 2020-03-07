@@ -21,11 +21,142 @@
 
   <dependencies>
     <dependency>
+      <!-- junit不能使用3点几（编程的方式），
+      而需要用4点几（注解的方式）-->
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+    <!--补全项目依赖 -->
+    <!-- 日志依赖:slf4j 和 logback-->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.7.12</version>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-core</artifactId>
+      <version>1.1.1</version>
+    </dependency>
+    <dependency>
+      <!--实现slf4j接口并整合 ，也就是说，
+      编程的时候只有slf4j就可以的，其他的东西有logback会帮忙整合-->
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.1.1</version>
+    </dependency>
+
+    <!--2.数据库相关依赖 -->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>5.1.35</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>c3p0</groupId>
+      <artifactId>c3p0</artifactId>
+      <version>0.9.1.2</version>
+    </dependency>
+
+    <!--Dao层的依赖：mybatis主要是2个依赖，一个是自身的依赖，一个是与spring整合的依赖
+    由于spring没有帮mybatis做整合的依赖，所以mybatis自己做了一个和spring整合的依赖
+    -->
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis</artifactId>
+      <version>3.3.0</version>
+    </dependency>
+    <!--mybatis自己做的一个与spring整合的依赖-->
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis-spring</artifactId>
+      <version>1.2.3</version>
+    </dependency>
+
+    <!--3.Servlet web 的4个相关依赖 即2个标签，和一个jackson，还有一个javaxservlet-->
+    <dependency>
+      <groupId>taglibs</groupId>
+      <artifactId>standard</artifactId>
+      <version>1.1.2</version>
+    </dependency>
+    <dependency>
+      <groupId>jstl</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.2</version>
+    </dependency>
+    <!--普通的显示用jsp，ajax使用的是jackson“集散”-->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.5.4</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.1.0</version>
+    </dependency>
+
+    <!--4.spring的依赖  -->
+    <!--1.spring的核心依赖 -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+      <version>4.1.7.RELEASE</version>
+    </dependency>
+    <!--用到spring肯定要用它的ioc依赖，那么就有spring-beans-->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-beans</artifactId>
+      <version>4.1.7.RELEASE</version>
+    </dependency>
+    <!--spring的扩展依赖，比如包扫描-->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>4.1.7.RELEASE</version>
+    </dependency>
+    <!-- spring dao层的依赖，比如需要jdbc的事务管理器，声明式事务tx（transaction的缩写）-->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>4.1.7.RELEASE</version>
+    </dependency>
+    <!--该项目本质上是一个javaweb项目，需要servlet容器去启动，比如tomcat
+    加载的时候，servlet容器需要启动spring的AOP和IOC，来启动spring的工厂-->
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>4.1.7.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>4.1.7.RELEASE</version>
+    </dependency>
+
+    <!--spring test 相关依赖  -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+      <version>4.1.7.RELEASE</version>
+    </dependency>
+
+
+
+
+
+
+
+
+
+
+
+
+
   </dependencies>
 
   <build>
