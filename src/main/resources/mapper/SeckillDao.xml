@@ -16,9 +16,9 @@
         and number > 0;
     </update>
 
-    <select id="queryByid" resultType="Seckill" parameterType="long">
+    <select id="queryById" resultType="Seckill" parameterType="long">
         <!--因为已经开启驼峰命名自动转换，所以下面的sql脚本不需要把字段里的下划线去掉，变成变量名了-->
-        select seckill_id,name,number ,start_time,end_time,create_time
+        select seckill_id,name,number,start_time,end_time,create_time
         from seckill
         where seckill_id = #{seckillId}
     </select>
