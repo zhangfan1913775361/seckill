@@ -9,8 +9,8 @@
     <!--1.配置数据库相关参数：properties的属性，用${url}的格式-->
     <context:property-placeholder location="classpath:jdbc.properties"/>
     <!--2.数据库连接池-->
-    <bean id = "dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
-    <!--<bean id = "dataSource" class="com.alibaba.druid.pool.DruidDataSource">-->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <!--<bean id = "dataSource" class="com.alibaba.druid.pool.DruidDataSource">-->
         <!--配置连接池属性！！即常见的那几个参数-->
         <property name="driverClass" value="${jdbc.driver}"/>
         <property name="jdbcUrl" value="${jdbc.url}"/>
@@ -48,4 +48,4 @@
 
 </beans>
 
-<!--总结，约定大于配置！！！！也就是说，你自己可以灵活的写你和spring的约定，让它自己扫描，省去了繁琐的配置-->
+        <!--总结，约定大于配置！！！！也就是说，你自己可以灵活的写你和spring的约定，让它自己扫描，省去了繁琐的配置-->

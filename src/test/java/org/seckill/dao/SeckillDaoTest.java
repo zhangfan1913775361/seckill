@@ -7,10 +7,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.annotation.Resource;
-
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 /**
  * 配置spring与Junit的整合
@@ -25,7 +22,7 @@ public class SeckillDaoTest {
     private SeckillDao seckillDao;
 
     @Test
-    public void testQueryById() throws Exception{
+    public void testQueryById() throws Exception {
         long id = 1000;
         Seckill seckill = seckillDao.queryById(id);
         System.out.println(seckill.getName());
@@ -38,8 +35,8 @@ public class SeckillDaoTest {
 
     @Test
     public void queryAll() {
-        List<Seckill> seckills = seckillDao.queryAll(0,100);
-        for (Seckill seckill : seckills){
+        List<Seckill> seckills = seckillDao.queryAll(0, 100);
+        for (Seckill seckill : seckills) {
             System.out.println(seckill);
         }
     }

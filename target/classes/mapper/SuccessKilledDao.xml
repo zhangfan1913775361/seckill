@@ -9,13 +9,13 @@
         value (#{seckillId},#{userPhone})
     </insert>
 
-    <select id="queryByIdWithSeckill" resultType="SuccessKilled">
+    <select id="queryByIdWithSeckill" resultType="org.seckill.entity.SuccessKilled">
         <!--根据id查询SuccessKilled并携带秒杀产品对象实体-->
         <!--如何告诉Mybatis把结果映射到SuccessKilled同时还可以映射seckill属性-->
         <!--上面那句话，因为SuccessKilled里有一个seckill类型的变量，需要同时带进来-->
         <!--可见Mybatis的优越性，可以自由控制sql！！！展示高超的增删改查能力！-->
         select
-          sk.seckill_id,
+        sk.seckill_id,
         sk.user_phone,
         sk.create_time,
         sk.state,
