@@ -14,6 +14,10 @@ import java.util.List;
  * 配置spring与Junit的整合
  */
 
+/**
+ * master分支上的修改
+ */
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration({"classpath:spring/spring-dao.xml"})
 
