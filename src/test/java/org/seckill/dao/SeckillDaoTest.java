@@ -7,6 +7,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.annotation.Resource;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -31,11 +32,15 @@ public class SeckillDaoTest {
 
     @Test
     public void testReduceNumber() {
+        long seckillId = 1000;
+        Date date = new Date();
+        int updatecount  = seckillDao.reduceNumber(seckillId,date);
+        System.out.println(updatecount);
     }
 
     @Test
     public void queryAll() {
-        List<Seckill> seckills = seckillDao.queryAll(0, 100);
+        List<Seckill> seckills = seckillDao.queryAll(0, 2);
         for (Seckill seckill : seckills) {
             System.out.println(seckill);
         }

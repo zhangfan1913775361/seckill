@@ -6,7 +6,7 @@
     <insert id="insertSuccessKilled">
         <!--主键冲突，报错-->
         insert ignore into success_killed(seckill_id,user_phone)
-        value (#{seckillId},#{userPhone})
+        value (#{0},#{1})
     </insert>
 
     <select id="queryByIdWithSeckill" resultType="org.seckill.entity.SuccessKilled">
