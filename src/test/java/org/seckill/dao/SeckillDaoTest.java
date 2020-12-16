@@ -12,6 +12,10 @@ import java.util.List;
 
 /**
  * 配置spring与Junit的整合
+ *
+ *
+ * zhangfan_1216的修改
+ *
  */
 
 @RunWith(SpringJUnit4ClassRunner.class)
