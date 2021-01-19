@@ -17,6 +17,10 @@ import static org.junit.Assert.*;
  * 配置spring与Junit的整合
  */
 
+/**
+ * zhangfan1
+ */
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration({"classpath:spring/spring-dao.xml"})
 
