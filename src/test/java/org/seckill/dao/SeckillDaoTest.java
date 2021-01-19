@@ -26,10 +26,6 @@ import static org.junit.Assert.*;
 
 /**
  * master1
- * master2
- * master3
- * masater4
- * master5
  */
 
 @RunWith(SpringJUnit4ClassRunner.class)
