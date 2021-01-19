@@ -13,23 +13,9 @@ import java.util.List;
 /**
  * 配置spring与Junit的整合
  *
- *
- * zhangfan 1
- * zhangfan 2
- * zhangfan 3
- * zhangfan 4
- * zhangfan 5
- *
- */
-/**
- * 第二次test
+ *zhangfan 1
  */
 
-/**
- * master 1
- *
- *
- */
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration({"classpath:spring/spring-dao.xml"})
