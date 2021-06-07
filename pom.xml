@@ -45,7 +45,7 @@
       编程的时候只有slf4j就可以的，其他的东西有logback会帮忙整合-->
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
-      <version>1.1.1</version>
+      <version>1.2.0</version>
     </dependency>
 
     <!--2.数据库相关依赖 -->
