@@ -115,7 +115,7 @@
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-beans</artifactId>
-      <version>4.1.7.RELEASE</version>
+      <version>5.2.20.RELEASE</version>
     </dependency>
     <!--spring的扩展依赖，比如包扫描-->
     <dependency>
